@@ -25,6 +25,8 @@ if(file_exists('.env')) {
 $appEnv = getenv('APP_ENV');
 
 $aggregator = new ConfigAggregator([
+    \Laminas\Serializer\ConfigProvider::class,
+    \Laminas\Cache\Storage\Adapter\BlackHole\ConfigProvider::class,
     \Laminas\Filter\ConfigProvider::class,
     \rollun\utils\Metrics\ConfigProvider::class,
     \rollun\utils\FailedProcesses\ConfigProvider::class,
@@ -49,7 +51,8 @@ $aggregator = new ConfigAggregator([
     \rollun\logger\ConfigProvider::class,
     \rollun\tracer\ConfigProvider::class,
     \rollun\callback\ConfigProvider::class,
-
+    // OpenAPI config
+    \OpenAPI\ConfigProvider::class,
     // Default App module config
     // Load application config in a pre-defined order in such a way that local settings
     // overwrite global settings. (Loaded as first to last):

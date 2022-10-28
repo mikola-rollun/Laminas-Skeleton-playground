@@ -1,0 +1,37 @@
+swagger: "2.0"
+info:
+  description: ""
+  version: "1.0.0"
+  title: "Butler"
+host: "http://api.example.com/v1"
+basePath: "/"
+tags:
+- name: "buttler"
+  description: ""
+schemes:
+- "http"
+paths:
+  /greetings:
+    get:
+      tags:
+      - "buttler"
+      summary: "Default greeter. Get's the name from request and returns it with greeting"
+      description: ""
+      operationId: "greetRequester"
+      consumes:
+      - "application/json"
+      produces:
+      - "text/plain"
+      parameters:
+      - name: "name"
+        in: "query"
+        description: "A name of requestor"
+        required: true
+        type: string
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "string"
+            example: "Hello, Mikola! It's nice day outside"
+            

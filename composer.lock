@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93b3772fe50e3efd3a7b33bb1412c61f",
+    "content-hash": "ccfb2f6dae716c50e44e213698d4cf7d",
     "packages": [
         {
             "name": "ajgl/csv-rfc",
@@ -122,6 +122,142 @@
                 "source": "https://github.com/apache/thrift/tree/0.16.0"
             },
             "time": "2022-02-09T19:46:41+00:00"
+        },
+        {
+            "name": "articus/data-transfer",
+            "version": "0.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Articus/DataTransfer.git",
+                "reference": "e82fe99e488798fab012aa2e8f6d663eb1b022d0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Articus/DataTransfer/zipball/e82fe99e488798fab012aa2e8f6d663eb1b022d0",
+                "reference": "e82fe99e488798fab012aa2e8f6d663eb1b022d0",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-servicemanager": "^3.4",
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^1.8",
+                "ext-uopz": "*",
+                "friends-of-phpspec/phpspec-code-coverage": "*",
+                "kahlan/kahlan": "^5.0",
+                "laminas/laminas-stdlib": "^3.2",
+                "laminas/laminas-validator": "^2.12",
+                "mockery/mockery": "^1.3",
+                "phpspec/phpspec": "^5.1|^6.1|^7.0",
+                "psr/simple-cache": "^1.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "It is required for Articus\\DataTransfer\\MetadataProvider\\Annotation (default metadata provider)",
+                "laminas/laminas-stdlib": "It is required for Articus\\DataTransfer\\MetadataProvider\\Annotation (default metadata provider)",
+                "laminas/laminas-validator": "It is required for Articus\\DataTransfer\\Validator\\Laminas",
+                "psr/simple-cache": "It is required for Articus\\DataTransfer\\MetadataProvider\\Annotation (default metadata provider)"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arthur Mogliev"
+                }
+            ],
+            "description": "Library for merging source data to destination data only if destination data remains valid after that",
+            "keywords": [
+                "data merge",
+                "data patch",
+                "extraction",
+                "extractor",
+                "hydration",
+                "hydrator",
+                "validation",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/Articus/DataTransfer/issues",
+                "source": "https://github.com/Articus/DataTransfer/tree/0.5.3"
+            },
+            "time": "2022-04-12T20:23:23+00:00"
+        },
+        {
+            "name": "articus/path-handler",
+            "version": "0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Articus/PathHandler.git",
+                "reference": "1fa3b0747e479d6e5762b70f8ac5d6ff4b42d98c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Articus/PathHandler/zipball/1fa3b0747e479d6e5762b70f8ac5d6ff4b42d98c",
+                "reference": "1fa3b0747e479d6e5762b70f8ac5d6ff4b42d98c",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-servicemanager": "^3.4",
+                "mezzio/mezzio": "^3.2",
+                "php": "^7.1|^8.0"
+            },
+            "require-dev": {
+                "articus/data-transfer": "^0.4",
+                "doctrine/annotations": "^1.8",
+                "ext-json": "*",
+                "ext-uopz": "*",
+                "friends-of-phpspec/phpspec-code-coverage": "*",
+                "laminas/laminas-diactoros": "^2.3",
+                "laminas/laminas-stdlib": "^3.2",
+                "mockery/mockery": "^1.3",
+                "nikic/fast-route": "^1.3",
+                "phpspec/phpspec": "^5.1|^6.1|^7.0",
+                "psr/simple-cache": "^1.0"
+            },
+            "suggest": {
+                "articus/data-transfer": "It is required for Articus\\PathHandler\\Attribute\\Transfer and Articus\\PathHandler\\Producer\\Transfer",
+                "doctrine/annotations": "It is required for Articus\\PathHandler\\MetadataProvider\\Annotation (default metadata provider).",
+                "laminas/laminas-stdlib": "It is required for Articus\\PathHandler\\MetadataProvider\\Annotation (default metadata provider).",
+                "nikic/fast-route": "It is required for Articus\\PathHandler\\Router\\FastRoute (default router)",
+                "psr/simple-cache": "It is required for Articus\\PathHandler\\MetadataProvider\\Annotation (default metadata provider)."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arthur Mogliev"
+                }
+            ],
+            "description": "Library for API development with Mezzio that simplifies creating operation middlewares and registering them in router",
+            "keywords": [
+                "api",
+                "dispatch",
+                "laminas",
+                "mezzio",
+                "middleware",
+                "routing"
+            ],
+            "support": {
+                "issues": "https://github.com/Articus/PathHandler/issues",
+                "source": "https://github.com/Articus/PathHandler/tree/0.6.1"
+            },
+            "time": "2021-01-30T16:18:19+00:00"
         },
         {
             "name": "aws/aws-sdk-php",
@@ -976,6 +1112,158 @@
                 "source": "https://github.com/dflydev/dflydev-fig-cookies/tree/main"
             },
             "time": "2022-01-25T17:30:35+00:00"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "1.14.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "8708a312e86218d1e597bffbb1e4bbd5f04daa08"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/8708a312e86218d1e597bffbb1e4bbd5f04daa08",
+                "reference": "8708a312e86218d1e597bffbb1e4bbd5f04daa08",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "1.*",
+                "ext-tokenizer": "*",
+                "php": "^7.1 || ^8.0",
+                "psr/cache": "^1 || ^2 || ^3"
+            },
+            "require-dev": {
+                "doctrine/cache": "^1.11 || ^2.0",
+                "doctrine/coding-standard": "^9 || ^10",
+                "phpstan/phpstan": "~1.4.10 || ^1.8.0",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "symfony/cache": "^4.4 || ^5.4 || ^6",
+                "vimeo/psalm": "^4.10"
+            },
+            "suggest": {
+                "php": "PHP 8.0 or higher comes with attributes, a native replacement for annotations"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "https://www.doctrine-project.org/projects/annotations.html",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/annotations/issues",
+                "source": "https://github.com/doctrine/annotations/tree/1.14.x"
+            },
+            "time": "2022-10-12T16:24:37+00:00"
+        },
+        {
+            "name": "doctrine/lexer",
+            "version": "1.3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/lexer.git",
+                "reference": "ff0bfc39c3cce1cc0aa69471235194c6f104384d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/ff0bfc39c3cce1cc0aa69471235194c6f104384d",
+                "reference": "ff0bfc39c3cce1cc0aa69471235194c6f104384d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^9.0",
+                "phpstan/phpstan": "^1.3",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
+                "vimeo/psalm": "^4.11"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Lexer\\": "lib/Doctrine/Common/Lexer"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "PHP Doctrine Lexer parser library that can be used in Top-Down, Recursive Descent Parsers.",
+            "homepage": "https://www.doctrine-project.org/projects/lexer.html",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "lexer",
+                "parser",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/doctrine/lexer/issues",
+                "source": "https://github.com/doctrine/lexer/tree/1.3.x"
+            },
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Flexer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-02-28T11:12:09+00:00"
         },
         {
             "name": "elasticsearch/elasticsearch",
@@ -1891,6 +2179,73 @@
             "time": "2021-11-18T16:54:49+00:00"
         },
         {
+            "name": "laminas/laminas-cache-storage-adapter-blackhole",
+            "version": "2.2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-cache-storage-adapter-blackhole.git",
+                "reference": "b0e108b38faf76e2eabb5d3554d2207af70bd047"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-cache-storage-adapter-blackhole/zipball/b0e108b38faf76e2eabb5d3554d2207af70bd047",
+                "reference": "b0e108b38faf76e2eabb5d3554d2207af70bd047",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-cache": "^3.0",
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+            },
+            "conflict": {
+                "laminas/laminas-servicemanager": "<3.11"
+            },
+            "provide": {
+                "laminas/laminas-cache-storage-implementation": "1.0"
+            },
+            "require-dev": {
+                "laminas/laminas-cache-storage-adapter-test": "^2.3",
+                "laminas/laminas-coding-standard": "~2.4.0",
+                "psalm/plugin-phpunit": "^0.17.0",
+                "vimeo/psalm": "^4.9"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laminas": {
+                    "config-provider": "Laminas\\Cache\\Storage\\Adapter\\BlackHole\\ConfigProvider",
+                    "module": "Laminas\\Cache\\Storage\\Adapter\\BlackHole"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\Cache\\Storage\\Adapter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Laminas cache adapter for blackhole",
+            "keywords": [
+                "cache",
+                "laminas"
+            ],
+            "support": {
+                "docs": "https://docs.laminas.dev/laminas-cache-storage-adapter-blackhole/",
+                "forum": "https://discourse.laminas.dev/",
+                "issues": "https://github.com/laminas/laminas-cache-storage-adapter-blackhole/issues",
+                "rss": "https://github.com/laminas/laminas-cache-storage-adapter-blackhole/releases.atom",
+                "source": "https://github.com/laminas/laminas-cache-storage-adapter-blackhole"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2022-10-25T01:55:14+00:00"
+        },
+        {
             "name": "laminas/laminas-cache-storage-adapter-filesystem",
             "version": "2.4.x-dev",
             "source": {
@@ -1958,6 +2313,73 @@
                 }
             ],
             "time": "2022-10-23T01:35:13+00:00"
+        },
+        {
+            "name": "laminas/laminas-code",
+            "version": "4.8.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-code.git",
+                "reference": "1bfd72dce027eb63d323041678a6a2e2d98f407e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-code/zipball/1bfd72dce027eb63d323041678a6a2e2d98f407e",
+                "reference": "1bfd72dce027eb63d323041678a6a2e2d98f407e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4, <8.2"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^1.13.2",
+                "ext-phar": "*",
+                "laminas/laminas-coding-standard": "^2.3.0",
+                "laminas/laminas-stdlib": "^3.6.1",
+                "phpunit/phpunit": "^9.5.10",
+                "psalm/plugin-phpunit": "^0.17.0",
+                "vimeo/psalm": "^4.13.1"
+            },
+            "suggest": {
+                "doctrine/annotations": "Doctrine\\Common\\Annotations >=1.0 for annotation features",
+                "laminas/laminas-stdlib": "Laminas\\Stdlib component"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "polyfill/ReflectionEnumPolyfill.php"
+                ],
+                "psr-4": {
+                    "Laminas\\Code\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Extensions to the PHP Reflection API, static code scanning, and code generation",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "code",
+                "laminas",
+                "laminasframework"
+            ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-code/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-code/issues",
+                "rss": "https://github.com/laminas/laminas-code/releases.atom",
+                "source": "https://github.com/laminas/laminas-code"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2022-10-15T00:25:14+00:00"
         },
         {
             "name": "laminas/laminas-component-installer",
@@ -2870,6 +3292,77 @@
                 }
             ],
             "time": "2022-10-18T08:38:15+00:00"
+        },
+        {
+            "name": "laminas/laminas-serializer",
+            "version": "2.15.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laminas/laminas-serializer.git",
+                "reference": "c4ceeb080f8d080006616072d2926949b3e5b9ea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laminas/laminas-serializer/zipball/c4ceeb080f8d080006616072d2926949b3e5b9ea",
+                "reference": "c4ceeb080f8d080006616072d2926949b3e5b9ea",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-json": "^3.1",
+                "laminas/laminas-stdlib": "^3.2",
+                "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
+            },
+            "conflict": {
+                "zendframework/zend-serializer": "*"
+            },
+            "require-dev": {
+                "laminas/laminas-coding-standard": "~2.4.0",
+                "laminas/laminas-math": "~3.6.0",
+                "laminas/laminas-servicemanager": "~3.19.0",
+                "phpunit/phpunit": "~9.5.25"
+            },
+            "suggest": {
+                "laminas/laminas-math": "(^3.3) To support Python Pickle serialization",
+                "laminas/laminas-servicemanager": "(^3.6) To support plugin manager support"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laminas": {
+                    "component": "Laminas\\Serializer",
+                    "config-provider": "Laminas\\Serializer\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laminas\\Serializer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "Serialize and deserialize PHP structures to a variety of representations",
+            "homepage": "https://laminas.dev",
+            "keywords": [
+                "laminas",
+                "serializer"
+            ],
+            "support": {
+                "chat": "https://laminas.dev/chat",
+                "docs": "https://docs.laminas.dev/laminas-serializer/",
+                "forum": "https://discourse.laminas.dev",
+                "issues": "https://github.com/laminas/laminas-serializer/issues",
+                "rss": "https://github.com/laminas/laminas-serializer/releases.atom",
+                "source": "https://github.com/laminas/laminas-serializer"
+            },
+            "funding": [
+                {
+                    "url": "https://funding.communitybridge.org/projects/laminas-project",
+                    "type": "community_bridge"
+                }
+            ],
+            "time": "2022-10-16T14:51:10+00:00"
         },
         {
             "name": "laminas/laminas-servicemanager",
@@ -3828,6 +4321,159 @@
             },
             "abandoned": "dragonmantank/cron-expression",
             "time": "2019-12-28T04:23:06+00:00"
+        },
+        {
+            "name": "nette/php-generator",
+            "version": "v3.6.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/php-generator.git",
+                "reference": "ba0cbff78421897e3cc79ef43e359090c90727ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/php-generator/zipball/ba0cbff78421897e3cc79ef43e359090c90727ed",
+                "reference": "ba0cbff78421897e3cc79ef43e359090c90727ed",
+                "shasum": ""
+            },
+            "require": {
+                "nette/utils": "^3.1.2",
+                "php": ">=7.2 <8.3"
+            },
+            "require-dev": {
+                "nette/tester": "^2.4",
+                "nikic/php-parser": "^4.13",
+                "phpstan/phpstan": "^0.12",
+                "tracy/tracy": "^2.8"
+            },
+            "suggest": {
+                "nikic/php-parser": "to use ClassType::withBodiesFrom() & GlobalFunction::withBodyFrom()"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.6-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🐘 Nette PHP Generator: generates neat PHP code for you. Supports new PHP 8.1 features.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "code",
+                "nette",
+                "php",
+                "scaffolding"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/php-generator/issues",
+                "source": "https://github.com/nette/php-generator/tree/v3.6"
+            },
+            "time": "2022-10-12T23:44:29+00:00"
+        },
+        {
+            "name": "nette/utils",
+            "version": "v3.2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/utils.git",
+                "reference": "d9a5ce7d828d255cde61f75de1f4ba71af076c18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/utils/zipball/d9a5ce7d828d255cde61f75de1f4ba71af076c18",
+                "reference": "d9a5ce7d828d255cde61f75de1f4ba71af076c18",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2 <8.3"
+            },
+            "conflict": {
+                "nette/di": "<3.0.6"
+            },
+            "require-dev": {
+                "nette/tester": "~2.0",
+                "phpstan/phpstan": "^1.0",
+                "tracy/tracy": "^2.3"
+            },
+            "suggest": {
+                "ext-gd": "to use Image",
+                "ext-iconv": "to use Strings::webalize(), toAscii(), chr() and reverse()",
+                "ext-intl": "to use Strings::webalize(), toAscii(), normalize() and compare()",
+                "ext-json": "to use Nette\\Utils\\Json",
+                "ext-mbstring": "to use Strings::lower() etc...",
+                "ext-tokenizer": "to use Nette\\Utils\\Reflection::getUseStatements()",
+                "ext-xml": "to use Strings::length() etc. when mbstring is not available"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0-only",
+                "GPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "🛠  Nette Utils: lightweight utilities for string & array manipulation, image handling, safe JSON encoding/decoding, validation, slug or strong password generating etc.",
+            "homepage": "https://nette.org",
+            "keywords": [
+                "array",
+                "core",
+                "datetime",
+                "images",
+                "json",
+                "nette",
+                "paginator",
+                "password",
+                "slugify",
+                "string",
+                "unicode",
+                "utf-8",
+                "utility",
+                "validation"
+            ],
+            "support": {
+                "issues": "https://github.com/nette/utils/issues",
+                "source": "https://github.com/nette/utils/tree/v3.2"
+            },
+            "time": "2022-10-23T16:30:55+00:00"
         },
         {
             "name": "nicolab/php-ftp-client",
@@ -5186,6 +5832,82 @@
                 "issues": "https://github.com/rollun-com/rollun-logger/issues"
             },
             "time": "2022-03-24T10:28:17+00:00"
+        },
+        {
+            "name": "rollun-com/rollun-openapi",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rollun-com/rollun-openapi.git",
+                "reference": "6af827094707238aadfdf7e0ea084b5cf44d7042"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rollun-com/rollun-openapi/zipball/6af827094707238aadfdf7e0ea084b5cf44d7042",
+                "reference": "6af827094707238aadfdf7e0ea084b5cf44d7042",
+                "shasum": ""
+            },
+            "require": {
+                "articus/data-transfer": "^0.5.2",
+                "articus/path-handler": "0.6.1",
+                "doctrine/annotations": "^1.8",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "guzzle/guzzle": "dev-php-8.0 as v3.9.0",
+                "laminas/laminas-cache": "^3.1.2",
+                "laminas/laminas-cache-storage-adapter-blackhole": "^2.0.0",
+                "laminas/laminas-cache-storage-adapter-filesystem": "^2.0.1",
+                "laminas/laminas-code": "*",
+                "laminas/laminas-component-installer": "*",
+                "laminas/laminas-config-aggregator": "^1.7",
+                "laminas/laminas-diactoros": "^2.8.0",
+                "laminas/laminas-serializer": "^2.13.0",
+                "laminas/laminas-servicemanager": "^3.10",
+                "mezzio/mezzio": "^3.9",
+                "mezzio/mezzio-fastroute": "^3.4",
+                "mezzio/mezzio-helpers": "^5.8",
+                "nette/php-generator": "^3.4",
+                "nikic/fast-route": "^1.3",
+                "php": ">8.0",
+                "rollun-com/rollun-callback": "^7.0.0",
+                "rollun-com/rollun-datastore": "^8.0.1",
+                "rollun-com/rollun-dic": "^4.0.0",
+                "symfony/dotenv": "^6.0.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5.10"
+            },
+            "default-branch": true,
+            "bin": [
+                "bin/openapi-generator"
+            ],
+            "type": "library",
+            "extra": {
+                "zf": {
+                    "component": "OpenAPI\\",
+                    "config-provider": "OpenAPI\\ConfigProvider"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Task\\": "src/Task/src/",
+                    "Test\\": "src/Test/src",
+                    "OpenAPI\\": "src/OpenAPI/",
+                    "HelloUser\\": "src/HelloUser/src/",
+                    "DataStoreExample\\": "src/DataStoreExample/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Bridge between rollun skeleton and openapi generated code",
+            "support": {
+                "issues": "https://github.com/rollun-com/rollun-openapi/issues",
+                "source": "https://github.com/rollun-com/rollun-openapi/tree/master"
+            },
+            "time": "2022-10-13T11:02:32+00:00"
         },
         {
             "name": "rollun-com/rollun-utils",
@@ -9466,6 +10188,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "guzzle/guzzle": 20,
+        "rollun-com/rollun-openapi": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": false,
