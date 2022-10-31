@@ -9,9 +9,11 @@ return [
         ],
     ],
     'dependencies' => [
+        'factories' => [
+            \Butler\Controllers\Buttler1Controller::class => \Butler\Controllers\Buttler1ControllerFactory::class
+        ],
         'invokables' => [
             \Butler\OpenAPI\V1\Server\Rest\Buttler::class => \Butler\OpenAPI\V1\Server\Rest\Buttler::class,
-            'Buttler1Controller' => \Butler\Controllers\Buttler1Controller::class
         ],
     ],
 ];

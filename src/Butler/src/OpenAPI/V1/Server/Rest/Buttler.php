@@ -12,7 +12,7 @@ use rollun\dic\InsideConstruct;
  */
 class Buttler extends Base7Abstract
 {
-	public const CONTROLLER_OBJECT = 'Buttler1Controller';
+	public const CONTROLLER_OBJECT = \Butler\Controllers\Buttler1Controller::class;
 
 	/** @var object */
 	protected $controllerObject;
