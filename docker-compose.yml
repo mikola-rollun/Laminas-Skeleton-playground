@@ -11,6 +11,7 @@ services:
       - 8080:80
     depends_on:
       - php-fpm
+      - mysql
 
   php-fpm:
     image: maxrollundev/php-fpm-dev-8.0
@@ -23,6 +24,15 @@ services:
     image: maxrollundev/php-openapi-generator:8.0
     volumes:
       - ./:/var/www/app
-
-volumes:
   mysql:
+    image: mariadb:10.4
+    volumes:
+      - "./data/db:/var/lib/mysql"
+    ports:
+       - "3307:3306"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=butler
+      - MYSQL_USER=superAdminSecret
+      - MYSQL_PASSWORD=root

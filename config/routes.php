@@ -51,6 +51,12 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
         'home-page'
     );
 
+    $app->get(
+        '/order/{count}',
+        App\Handler\OrderHandler::class,
+        'order'
+    );
+
     $app->route(
         '/api/datastore[/{resourceName}[/{id}]]',
         DataStoreApi::class,

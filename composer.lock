@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccfb2f6dae716c50e44e213698d4cf7d",
+    "content-hash": "7884a8afd42b709436094e6873a8a9fc",
     "packages": [
         {
             "name": "ajgl/csv-rfc",

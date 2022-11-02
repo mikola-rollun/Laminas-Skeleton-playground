@@ -49,7 +49,7 @@
     "mezzio/mezzio-helpers": "^5.8",
     "mezzio/mezzio-session": "^1.6.0",
     "rollun-com/rollun-callback": "^7.0.0",
-    "rollun-com/rollun-datastore": "^8.0.0",
+    "rollun-com/rollun-datastore": "^8.0",
     "rollun-com/rollun-logger": "^7.0",
     "rollun-com/rollun-openapi": "dev-master",
     "symfony/dotenv": "^6.0.3"

@@ -12,6 +12,14 @@ return [
             'db' => AdapterInterface::class,
         ],
     ],
+    'dataStore' => [
+        'dataStore' => [
+            'class' => \rollun\datastore\DataStore\DbTable::class,
+            'tableName' => 'orders',
+            'dbAdapter' => 'db', // service name, optional
+            'sqlQueryBuilder' => 'sqlQueryBuilder' // service name, optional
+        ],
+    ],
     'db' => [
         'driver' => getenv('DB_DRIVER') ?: 'Pdo_Mysql',
         'database' => getenv('DB_NAME'),
