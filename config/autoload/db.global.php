@@ -12,7 +12,7 @@ return [
             'db' => AdapterInterface::class,
         ],
     ],
-    'dataStore' => [
+    \rollun\datastore\DataStore\Factory\DataStoreAbstractFactory::KEY_DATASTORE => [
         'dataStore' => [
             'class' => \rollun\datastore\DataStore\DbTable::class,
             'tableName' => 'orders',
