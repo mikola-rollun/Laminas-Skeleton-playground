@@ -27,7 +27,7 @@ class ProxiedGreeter implements RequestHandlerInterface
 
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
-        // $this->rest->setHostIndex(1);
+        $this->rest->setHostIndex(1);
         $query = $request->getQueryParams();
         if (!isset($query['name'])) {
             return new Response\JsonResponse([]);

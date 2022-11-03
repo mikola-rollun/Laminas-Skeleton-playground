@@ -3,9 +3,11 @@ info:
   version: "1"
   title: "Butler"
 servers:
+  - url: http://localhost:8080/openapi/Butler/v1
   - url: http://host.docker.internal:8080/openapi/Butler/v1
 tags:
 - name: "buttler"
+- name: "buttler REST"
 paths:
   /greetings:
     get:
@@ -35,3 +37,97 @@ paths:
                       message:
                         type: string
                         example: 'Greetings Mikola'
+  /greet:
+    post:
+      tags:
+      - "buttler REST"
+      operationId: "createGreet"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostGreet'
+      responses:
+        "200":
+          description: "successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Greet"
+  /greet/{id}:
+    get:
+      tags:
+      - "buttler REST"
+      operationId: "getGreetById"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: integer
+          example: '1'
+      responses:
+        "200":
+          description: "successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Greet"
+    put:
+      tags:
+      - "buttler REST"
+      operationId: "UpdateGreetById"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: integer
+          example: '1'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostGreet'
+      responses:
+        "200":
+          description: "successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Greet"
+    delete:
+      tags:
+      - "buttler REST"
+      operationId: "DeleteGreetById"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: integer
+          example: '1'
+      responses:
+        "200":
+          description: "successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Greet"
+                      
+components:
+  schemas:
+    PostGreet:
+      type: object
+      properties:
+        name:
+          type: string
+    Greet:
+      type: object
+      properties:
+        name:
+          type: string
+        date_greeted:
+          type: string
