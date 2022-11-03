@@ -57,6 +57,12 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
         'order'
     );
 
+    $app->get(
+        '/proxied/greeter',
+        Butler\Handler\ProxiedGreeter::class,
+        'proxied_greeter'
+    );
+
     $app->route(
         '/api/datastore[/{resourceName}[/{id}]]',
         DataStoreApi::class,

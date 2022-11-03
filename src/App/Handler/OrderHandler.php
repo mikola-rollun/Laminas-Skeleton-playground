@@ -29,7 +29,7 @@ class OrderHandler implements RequestHandlerInterface
     
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {
-        $count = $request->getAttribute("count", 1);        
+        $count = $request->getAttribute("count", 1);
 
         $items = [];
         for ($i = 0; $i < $count; $i++) {
