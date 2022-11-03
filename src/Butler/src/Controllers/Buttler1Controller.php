@@ -7,7 +7,7 @@ use Butler\OpenAPI\V1\DTO;
 
 class Buttler1Controller {
 
-    private $logger;
+    protected $logger;
 
     function __construct(LoggerInterface $logger)
     {
@@ -25,25 +25,35 @@ class Buttler1Controller {
         ];
     }
 
-    public function getGreetById() {
-        // echo 123;
-        // die();
+    public function getGreetById($queryData) {
+        $data = [
+            "name" => "Mikola (" . $queryData . ")",
+            "date_greeted" => "Just now"
+        ];
+		return $data;
     }
 
     public function createGreet(DTO\PostGreet $queryData) {
-        $q = $queryData;
-
-        // echo 123;
-        // die();
+        $data = [
+            "name" => $queryData->name,
+            "date_greeted" => "Just now"
+        ];
+		return $data;
     }
 
     public function UpdateGreetById(DTO\PostGreet $queryData) {
-        // echo 123;
-        // die();
+        $data = [
+            "name" => $queryData->name,
+            "date_greeted" => "Just now"
+        ];
+		return $data;
     }
 
     public function DeleteGreetById($queryData) {
-        // echo 123;
-        // die();
+        $data = [
+            "name" => "Mikola (" . $queryData . ")",
+            "date_greeted" => "Just now"
+        ];
+		return $data;
     }
 }
